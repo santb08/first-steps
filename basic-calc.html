@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input
+        id="firts-number"
+        placeholder="First Number"
+        type="number"
+    />
+    <input
+        id="second-number"
+        placeholder="Second Number"
+        type="number"
+    />
+    <button onclick="onClickSumButton()">+</button>
+    <button onclick="alert('Gil es gay pero restando')">-</button>
+    <button onclick="alert('Gil es gay pero con asterisco')">*</button>
+    <button onclick="alert('Gil es gay pero dividiendo')">/</button>
+    <div>
+        <p>Result</p>
+        <span id="result">0.00</span>
+    </div>
+
+    <script>
+        // Aquí va código JS
+        // const nombreVar = 1230;
+        // alert('Hello World ' + nombreVar);
+        const elementInputFirstNumber = document.getElementById('firts-number');
+        const elementInputSecondNumber = document.getElementById('second-number');
+        const elementResult = document.getElementById('result');
+
+        // function nombreFuncion(numa, numb, numc, numd) {
+        //     // DO SOMETHING
+        // }
+
+        function sum(a, b) {
+            return a + b;
+        }
+
+        // Is the same
+        // const sum1 = 5 + 10;
+        // const sum2 = sum(5, 10);
+
+        function onClickSumButton() {
+            const numA = Number(elementInputFirstNumber.value);
+            const numB = Number(elementInputSecondNumber.value);
+            const result = sum(numA, numB);
+
+            // alert('Sum is equal to ' + result);
+            elementResult.innerText = result;
+        }
+    </script>
+</body>
+</html>
